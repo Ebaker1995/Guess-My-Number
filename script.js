@@ -104,3 +104,20 @@ document.querySelector('.check').addEventListener('click', function () {
   //   }
   // }
 });
+
+const chkElement = document.getElementById('chk');
+
+const ElementId = function (id) {
+  document.querySelector(id).classList.toggle('dark');
+};
+
+chkElement.addEventListener('change', () => {
+  // document.body.classList.toggle('dark');
+  ElementId('body');
+  ElementId('.left');
+  ElementId('.number');
+  ElementId('.label');
+  ElementId('header');
+  ElementId('.guess');
+  ElementId('.right');
+});
